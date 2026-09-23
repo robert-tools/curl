@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.1
+
+### 🐛 Bugfix
+
+- export types from `index.d`
+
 ## 1.0.0
 
 ### 🗃️ API changes - Initial release

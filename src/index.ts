@@ -55,3 +55,6 @@ export const curl = (url: URI, options: CURL_OPTS): string => {
     const rawData: string = command(finalCommand);
     return rawData;
 };
+
+// export types
+export type { CURL_ITEM, CURL_OPTS } from './index.d';

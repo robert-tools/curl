@@ -1,6 +1,6 @@
 {
     "name": "@robert.tools/curl",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Provide an easy to use curl function",
     "main": "./dist/index.js",
     "types": "./dist/index.d.ts",
