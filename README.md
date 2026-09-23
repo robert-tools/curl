@@ -1,21 +1,21 @@
-# 🗂️ @robert.tools/sample
+# 🗂️ @robert.tools/curl
 
-<description>
+Provide an easy to use curl function
 
 ## 📜 Usage
 
 ### 🟢 Installation
 
 ```bash
-npm install @robert.tools/sample
+npm install @robert.tools/curl
 ```
 
 ### 📝 Sample usage
 
 ```typescript
-import { <name> } from '@robert.tools/sample';
+import { curl } from '@robert.tools/curl';
 
-<name>('hello'); // '<name>: hello'
+curl('hello'); // 'curl: hello'
 ```
 
 ## 🗃️ commands

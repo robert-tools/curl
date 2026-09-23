@@ -1,7 +1,7 @@
 {
-    "name": "@robert.tools/sample",
-    "version": "1.1.8",
-    "description": "<description>",
+    "name": "@robert.tools/curl",
+    "version": "1.0.0",
+    "description": "Provide an easy to use curl function",
     "main": "./dist/index.js",
     "types": "./dist/index.d.ts",
     "exports": {
@@ -25,20 +25,20 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/robert-tools/<name>.git"
+        "url": "git+https://github.com/robert-tools/curl.git"
     },
     "bugs": {
-        "url": "https://github.com/robert-tools/<name>/issues"
+        "url": "https://github.com/robert-tools/curl/issues"
     },
-    "homepage": "https://github.com/robert-tools/<name>#readme",
+    "homepage": "https://github.com/robert-tools/curl#readme",
     "keywords": [
         "typescript",
         "node",
-        "<name>",
+        "curl",
         "robert.tools"
     ],
-    "author": "<author>",
-    "license": "<license>",
+    "author": "Robert Willemelis",
+    "license": "MIT",
     "engines": {
         "node": ">=22"
     },
