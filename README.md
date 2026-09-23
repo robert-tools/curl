@@ -15,18 +15,19 @@ npm install @robert.tools/curl
 ```typescript
 import { curl } from '@robert.tools/curl';
 
-curl('hello'); // 'curl: hello'
+curl('www.robert.tools', { silent: true }); // 'curl: robert.tools'
 ```
 
 ## 🗃️ commands
-After an npm install with `npm i` the following commands are available:
-* initialize placeholders: `npm run init <semantic>`
-* release a new version: `npm run release <semantic>`
 
+After an npm install with `npm i` the following commands are available:
+
+- execute curl command: `curl(url, options)`
+- get curl data option: `getCurlData(request)`
 
 ## ⚖️ Notes
-This software is hand-crafted, test-driven and assisted by AI tools. I know each line of my code. ✌️
 
+This software is hand-crafted, test-driven and assisted by AI tools. I know each line of my code. ✌️
 
 | Tool  | Comment |
  | ------------- | ------------- |

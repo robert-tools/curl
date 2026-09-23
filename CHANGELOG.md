@@ -1,9 +1,8 @@
 # Changelog
 
-## 1.1.7
-add changelog and issue templates
-
-### ⚙️ chore
-- add CHANGELOG.md and templates in .github
-
 ## 1.0.0
+
+### 🗃️ API changes - Initial release
+
+- add curl() function for executing curl commands
+- add getCurlData() for getting data option of curl request
