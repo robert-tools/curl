@@ -1,9 +1,9 @@
-// external dependencies
+// 📦 external dependencies
 import { getUrlKey } from '@robert.tools/uri';
 import { filterObject, getProp } from '@robert.tools/utils';
 import { $string, URI } from '@robert.tools/typings';
 
-// internal dependencies
+// ⚙️ config
 import {
     CURL_OPTIONS,
     DEFAULT_UA,
@@ -11,7 +11,7 @@ import {
     PARAM_KEYS,
 } from '../index.config';
 
-// types
+// 🧩 types
 import type { CURL, CURL_OPTS, CURL_PARAMS } from '../index.d';
 
 /**

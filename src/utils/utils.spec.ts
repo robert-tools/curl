@@ -1,4 +1,4 @@
-import type { CURL_PARAMS } from '../index.d';
+// 📦 internal dependencies
 import {
     _setHeader,
     _getAllowedOption,
@@ -8,6 +8,9 @@ import {
     _setParams,
     _setValue,
 } from './utils';
+
+// 🧩 types
+import type { CURL_PARAMS } from '../index.d';
 
 describe('✅ _setHeader()', () => {
     it('should generate a curl header string', () => {

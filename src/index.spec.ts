@@ -1,8 +1,11 @@
-// external dependencies
+// 📦 external dependencies
 import * as cmd from '@robert.tools/cmd';
 
-// internal dependencies
-import { curl, getCurlData } from './index';
+// 📦 internal dependencies
+import { curl, getCurlData, hasTimeout } from './index';
+
+// ⚓ CONSTANTS
+const DOMAIN = 'http://example.com';
 
 describe('✅ getCurlData()', () => {
     const FN = getCurlData;
@@ -32,7 +35,6 @@ describe('✅ getCurlData()', () => {
         expect(result).toEqual({});
     });
 });
-
 describe('✅ curl()', () => {
     const FN = curl;
     let spy: jest.SpyInstance;
@@ -57,5 +59,24 @@ describe('✅ curl()', () => {
         const EXPECTED = `curl -s -i "${url}"`;
         expect(spy).toHaveBeenCalledWith(EXPECTED);
         spy.mockRestore();
+    });
+});
+describe('✅ hasTimeout()', () => {
+    const FN = hasTimeout;
+    it('should return true if timeout is less than 0.01', () => {
+        expect(FN(`curl -m 0.001 ${DOMAIN}`)).toBe(true);
+        expect(FN(`curl -m 0.01 ${DOMAIN}`)).toBe(true);
+        expect(FN(`curl -m 0.1 ${DOMAIN}`)).toBe(true);
+        expect(FN(`curl -m 0_1 ${DOMAIN}`)).toBe(false);
+        expect(FN(`curl -m 1 ${DOMAIN}`)).toBe(true);
+        expect(FN(`curl -m 1.2 ${DOMAIN}`)).toBe(true);
+    });
+
+    it('should return false if no timeout is specified', () => {
+        expect(FN(`curl ${DOMAIN}`)).toBe(false);
+    });
+
+    it('should return false if curl is undefined', () => {
+        expect(FN(undefined)).toBe(false);
     });
 });

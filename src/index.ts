@@ -1,13 +1,13 @@
-// external dependencies
+// 📦 external dependencies
 import { LOG } from '@robert.tools/log';
 import { command } from '@robert.tools/cmd';
 
-// internal dependencies
+// 📦 internal dependencies
 import { _getParamValue, _setParams } from './utils/utils';
 import { CURL_OPTIONS } from './index.config';
 import { URI } from '@robert.tools/typings';
 
-// types
+// 🧩 types
 import type { CURL_ITEM, CURL_OPTS } from './index.d';
 
 /**
@@ -56,5 +56,22 @@ export const curl = (url: URI, options: CURL_OPTS): string => {
     return rawData;
 };
 
-// export types
+/**
+ * 🎯 check if timeout is defined
+ * @param {string} curl ➡️ The curl command. //TODO
+ * @returns {boolean} 📤 Whether a timeout is defined.
+ */
+export const hasTimeout = (curl: string | undefined): boolean => {
+    if (!curl) return false;
+    const timeout = curl.match(/-m\s+([^\s]+)/);
+    const num = timeout ? timeout[1] : undefined;
+    const isNumber = num && !isNaN(parseFloat(num));
+    const isfloat = isNumber && !num.toString().includes('_'); // is valid float, not 1_0
+    if (timeout && isfloat) {
+        return true;
+    }
+    return false;
+};
+
+// 🗃️ export types
 export type { CURL_ITEM, CURL_OPTS } from './index.d';

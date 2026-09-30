@@ -1,0 +1,10 @@
+{
+    "no-duplicate-heading": {
+        "siblings_only": true
+    },
+    "MD033": {
+        "allowed_elements": [
+            "description"
+        ]
+    }
+}
